@@ -6,20 +6,13 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:32 by bportell          #+#    #+#             */
-/*   Updated: 2024/10/28 19:37:51 by bportell         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:06:47 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c);
+int	ft_isalpha(int c);
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
 }
