@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Tokyo Night",
+    "42header.username": "bportell",
+    "42header.email": "bportell@student.42lisboa.com",
+    "files.autoSave": "afterDelay",
+    "[c]": {
+       "editor.defaultFormatter": "keyhr.42-c-format"
+    },
+}
