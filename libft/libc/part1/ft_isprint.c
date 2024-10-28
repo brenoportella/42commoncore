@@ -6,7 +6,13 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:06 by bportell          #+#    #+#             */
-/*   Updated: 2024/10/28 19:37:51 by bportell         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:07:45 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isprint(int c);
+
+int	ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126);
+}
