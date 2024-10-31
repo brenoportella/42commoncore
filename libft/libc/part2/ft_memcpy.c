@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/10/29 17:14:59 by bportell         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:04:27 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,35 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t			i;
 	unsigned char	*c_dest;
 	unsigned char	*c_src;
 
-	c_dest = (unsigned char *)dest;
+	if (dest == (void *)0 && src == (void *)0)
+		return (dest);
 	c_src = (unsigned char *)src;
-	i = 0;
-	while (i < n)
+	c_dest = (unsigned char *)dest;
+	while (n > 0)
 	{
-		c_dest[i] = c_src[i];
-		i++;
+		*(c_dest++) = *(c_src++);
+		n--;
 	}
 	return (dest);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char src[] = "Testando memcpy personalizado";
+	char dest[30];
+
+	printf("Antes da cópia:\n");
+	printf("Source: %s\n", src);
+	printf("Destination: %s\n", dest);
+	ft_memcpy(dest, src, strlen(src) + 1);
+	printf("\nDepois da cópia:\n");
+	printf("Source: %s\n", src);
+	printf("Destination: %s\n", dest);
+	return (0);
+}
+*/
