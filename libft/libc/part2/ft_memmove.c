@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:01:21 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/04 15:16:32 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:20:30 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
@@ -54,3 +54,4 @@ int	main(void)
 	printf("AFTER FT_MEMMOVE\nThe src array is: %s\nThe dest array is: %s\n", a,
 		b);
 }
+*/
