@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/10/31 14:27:38 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:39:29 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	int				i;
 	unsigned char	*c_dest;
 	unsigned char	*c_src;
 
-	/* create a temp pointers */
-	/* checking if the pointers are null */
-	if (dest == (void *)0 && src == (void *)0)
-		return (dest);
-	/* attributing and casting value to temp pointers */
 	c_src = (unsigned char *)src;
 	c_dest = (unsigned char *)dest;
-	/* loop through the size n and copying the value from src to dest */
-	while (n > 0)
+	i = 0;
+	while (i < (int)n && (c_src || c_dest))
 	{
-		*(c_dest++) = *(c_src++);
-		n--;
+		c_dest[i] = c_src[i];
+		i++;
 	}
-	/* returning the dest pointer */
 	return (dest);
 }
 /*
