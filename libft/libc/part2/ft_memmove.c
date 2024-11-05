@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:01:21 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/04 15:20:30 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:30:47 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int i;
-	unsigned char *p_dest;
-	unsigned char *p_src;
+	size_t			i;
+	unsigned char	*p_dest;
+	unsigned char	*p_src;
 
 	p_dest = (unsigned char *)dest;
 	p_src = (unsigned char *)src;
 	if (p_dest < p_src && (p_dest || p_src))
 	{
 		i = 0;
-		while (i < (int)n)
+		while (i < n)
 		{
 			p_dest[i] = p_src[i];
 			i++;
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else if (p_dest > p_src && (p_dest || p_src))
 	{
-		while ((int)n > 0)
+		while (n > 0)
 		{
 			p_dest[n - 1] = p_src[n - 1];
 			n--;
@@ -41,13 +41,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/* #include <stdio.h>
+ /*
+ #include <stdio.h>
 
 int	main(void)
 {
 	char a[] = "Breno Portella";  // src
-	char b[] = "ABCDEFGHIJKLMNO"; // dest
-
+	char b[] = "abc"; // dest
 	printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
 		a, b);
 	ft_memmove(b, a, 10);
