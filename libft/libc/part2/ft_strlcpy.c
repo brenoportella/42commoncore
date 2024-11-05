@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:23 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/04 16:59:25 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:29:22 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	src_len = ft_strlen(src);
-    i = 0;
+	i = 0;
 	if (size > 0)
 	{
 		while (src[i] && i < size - 1)
@@ -48,7 +48,6 @@ int	main(void)
 {
 	char a[] = "Breno Portella";  // src
 	char b[] = "ABCDEFGHIJKLMNO"; // dest
-
 	printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
 		a, b);
 	ft_strlcpy(b, a, 13);
