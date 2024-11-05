@@ -6,7 +6,17 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:36 by bportell          #+#    #+#             */
-/*   Updated: 2024/10/29 17:34:37 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/05 16:54:36 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_toupper(int c);
+
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+	{
+		c = c - 32;
+	}
+	return (c);
+}
