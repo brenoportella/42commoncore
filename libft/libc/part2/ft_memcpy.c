@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/05 10:51:20 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:52:25 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*c_dest;
 	unsigned char	*c_src;
 
