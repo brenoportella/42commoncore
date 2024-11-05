@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/05 10:50:22 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:51:20 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -46,4 +46,4 @@ int	main(void)
 	printf("Source: %s\n", src);
 	printf("Destination: %s\n", dest);
 	return (0);
-}
+}*/
