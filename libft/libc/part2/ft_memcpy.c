@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/04 15:39:29 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:50:22 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int				i;
+	size_t				i;
 	unsigned char	*c_dest;
 	unsigned char	*c_src;
 
 	c_src = (unsigned char *)src;
 	c_dest = (unsigned char *)dest;
 	i = 0;
-	while (i < (int)n && (c_src || c_dest))
+	while (i < n && (c_src || c_dest))
 	{
 		c_dest[i] = c_src[i];
 		i++;
 	}
 	return (dest);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -47,4 +47,3 @@ int	main(void)
 	printf("Destination: %s\n", dest);
 	return (0);
 }
-*/
