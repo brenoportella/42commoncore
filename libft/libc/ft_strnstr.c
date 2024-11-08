@@ -6,11 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:53 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/08 12:56:03 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:02:45 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libft.h>
 
 char	*ft_strnstr(const char *src, const char *tofind, size_t len);
 

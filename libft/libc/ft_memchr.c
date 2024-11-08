@@ -6,11 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:42 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/05 17:38:13 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:00:44 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libft.h>
 
 void	*ft_memchr(const void *s, int c, size_t n);
 

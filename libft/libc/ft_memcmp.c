@@ -6,11 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:44 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/05 18:05:14 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:01:05 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libft.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 

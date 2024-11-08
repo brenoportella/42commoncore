@@ -6,11 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/05 10:52:25 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:01:18 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libft.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
