@@ -1,9 +1,52 @@
 {
-    "workbench.colorTheme": "Tokyo Night",
-    "42header.username": "bportell",
-    "42header.email": "bportell@student.42lisboa.com",
-    "files.autoSave": "afterDelay",
-    "[c]": {
-       "editor.defaultFormatter": "keyhr.42-c-format"
-    },
+	"workbench.colorTheme": "Tokyo Night",
+	"42header.username": "bportell",
+	"42header.email": "bportell@student.42lisboa.com",
+	"files.autoSave": "afterDelay",
+	"[c]": {
+		"editor.defaultFormatter": "keyhr.42-c-format"
+	 },
 }
+
+/*
+{
+	"editor.fontSize": 16,
+	"terminal.integrated.fontSize": 13,
+	//"editor.fontFamily": "JetBrains Mono",
+	"editor.fontWeight": "normal",
+	"editor.cursorBlinking": "smooth",
+	"editor.minimap.enabled": false,
+	"multiDiffEditor.experimental.enabled": false,
+	//"workbench.activityBar.iconClickBehavior": "focus",
+	//"workbench.activityBar.location": "top",
+	"breadcrumbs.filePath": "off",
+	//"zenMode.fullScreen": false,
+	//"zenMode.hideActivityBar": false,
+	//"zenMode.hideStatusBar": false,
+	//"window.commandCenter": false,
+	"workbench.layoutControl.enabled": false,
+	"git.openRepositoryInParentFolders": "never",
+	"python.createEnvironment.trigger": "off",
+	"[python]": {
+		"diffEditor.ignoreTrimWhitespace": false
+	},
+	"editor.wordWrap": "on",
+	"editor.wordWrapColumn": 79,
+	"42header.username": "bportell",
+	"42header.email": "bportell@student.42lisboa.com",
+	"files.autoSave": "afterDelay",
+	"[c]": {
+		"editor.defaultFormatter": "keyhr.42-c-format"
+	},
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"workbench.colorTheme": "Tokyo Night AltSynt",
+	"workbench.editorAssociations": {
+		"*.pdf": "default"
+	},
+	"editor.indentSize": "tabSize",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.renderWhitespace": "all",
+	"explorer.confirmDragAndDrop": false
+}
+*/
