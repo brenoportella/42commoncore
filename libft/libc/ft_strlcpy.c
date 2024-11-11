@@ -6,13 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:23 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 09:48:27 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:23:20 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -28,6 +26,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 			dest[i] = src[i];
 			i++;
 		}
+		dest[i] = '\0';
 	}
 	return (src_len);
 }
@@ -38,10 +37,9 @@ int	main(void)
 {
 	char a[] = "Breno Portella";  // src
 	char b[] = "ABCDEFGHIJKLMNO"; // dest
-	printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
-		a, b);
+	printf("BEFORE FT_STRLCPY:\nThe src array is: %s\nThe dest array is: %s\n", a, b);
 	ft_strlcpy(b, a, 13);
-	printf("AFTER FT_MEMMOVE\nThe src array is: %s\nThe dest array is: %s\n", a,
-		b);
+	printf("AFTER FT_STRLCPY:\nThe src array is: %s\nThe dest array is: %s\n", a, b);
+
 }
 */
