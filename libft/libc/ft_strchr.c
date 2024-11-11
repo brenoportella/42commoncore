@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:29 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 09:48:22 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:52:02 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 	char	*str;
 
-	str = (char *)s;
 	i = 0;
+	str = (char *)s;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return (&str[i]);
 		i++;
 	}
