@@ -6,9 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:39 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/08 15:11:41 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:47:32 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr);
 

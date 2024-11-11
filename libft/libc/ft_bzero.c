@@ -6,11 +6,12 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:13 by bportell          #+#    #+#             */
-/*   Updated: 2024/10/29 15:11:05 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:47:26 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n);
 
 void	ft_bzero(void *s, size_t n)

@@ -6,9 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:31 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/08 17:02:53 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:48:37 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c);
 

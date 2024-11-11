@@ -6,11 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:48:03 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/08 17:02:19 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:48:29 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(char *str);
 

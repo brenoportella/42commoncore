@@ -6,11 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:19 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/08 17:01:46 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:48:24 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
