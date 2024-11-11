@@ -6,7 +6,7 @@
 #    By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 09:25:32 by bportell          #+#    #+#              #
-#    Updated: 2024/11/11 09:40:43 by bportell         ###   ########.fr        #
+#    Updated: 2024/11/11 10:10:28 by bportell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ fclean: clean
 	@echo "Removing $(NAME)"
 	@rm -f $(NAME)
 	
-re: fclean clean
+re: fclean all
 	@echo "All files was removed!"
 
 .PHONY: all clean fclean re
