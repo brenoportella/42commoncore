@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:23 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 10:23:20 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:19:25 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ int	main(void)
 {
 	char a[] = "Breno Portella";  // src
 	char b[] = "ABCDEFGHIJKLMNO"; // dest
-	printf("BEFORE FT_STRLCPY:\nThe src array is: %s\nThe dest array is: %s\n", a, b);
+	printf("BEFORE FT_STRLCPY:\nThe src array is: %s\nThe dest array is: %s\n",
+		a, b);
 	ft_strlcpy(b, a, 13);
-	printf("AFTER FT_STRLCPY:\nThe src array is: %s\nThe dest array is: %s\n", a, b);
-
+	printf("AFTER FT_STRLCPY:\nThe src array is: %s\nThe dest array is: %s\n",
+		a, b);
 }
 */

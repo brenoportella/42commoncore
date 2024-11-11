@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:44 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 09:48:14 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:19:06 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    printf("The memcmp is: %i", ft_memcmp("abcdfg", "abcdef", 0));
+	printf("The memcmp is: %i", ft_memcmp("abcdfg", "abcdef", 0));
 }
 */

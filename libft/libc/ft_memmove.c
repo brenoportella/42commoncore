@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:01:21 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 09:46:45 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:19:09 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
- /*
- #include <stdio.h>
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	char a[] = "Breno Portella";  // src
-	char b[] = "abc"; // dest
-	printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
+   char a[] = "Breno Portella";  // src
+   char b[] = "abc"; // dest
+   printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
 		a, b);
-	ft_memmove(b, a, 10);
-	printf("AFTER FT_MEMMOVE\nThe src array is: %s\nThe dest array is: %s\n", a,
+   ft_memmove(b, a, 10);
+   printf("AFTER FT_MEMMOVE\nThe src array is: %s\nThe dest array is: %s\n", a,
 		b);
 }
 */
