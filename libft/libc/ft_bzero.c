@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:13 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 09:47:26 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:11:27 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*ptr;
 	unsigned int	i;
 
-	if (s == 0 || n <= 0)
-		return ;
 	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
