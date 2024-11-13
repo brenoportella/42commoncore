@@ -5,100 +5,109 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 12:39:54 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/12 17:44:58 by bportell         ###   ########.fr       */
+/*   Created: 2024/11/13 12:32:58 by bportell          #+#    #+#             */
+/*   Updated: 2024/11/13 17:36:03 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_str_count(char const *s, char c);
-static char	**ft_create_array(int n);
-static char	*ft_put_word(char const *array, int len);
-static void	*ft_free_array(char **array, int max);
+char		**ft_split(char const *s, char c);
+static int	ft_count_words(char const *s, char c);
 static int	ft_len_word(char const *s, char c);
-
-static int	ft_len_word(char const *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
-}
+static char	*ft_put_str(char const *s, int len);
+static char	**ft_create_arrays(int n);
 
 char	**ft_split(char const *s, char c)
 {
+	int		i;
 	int		j;
-	int		begin_word;
-	int		len_word;
-	char	**splited;
+	char	**arrays;
 
-	j = 0;
-	splited = ft_create_array(ft_str_count(s, c));
-	while (*s)
-	{
-		while (*s == c && *s)
-			s++;
-		len_word = ft_len_word(s, c);
-		splited[j] = ft_put_word(*s, len_word);
-		if (!splited[j])
-			return (ft_free_array(splited, ft_str_count(s, c) + 1));
-		s += len_word;
-		j++;
-	}
-	splited[j] = 0;
-	return (splited);
-}
-static int	ft_str_count(char const *s, char c)
-{
-	int	count;
-	int	i;
-
+	if (!s || !c)
+		return (0);
+	arrays = ft_create_arrays(ft_count_words(s, c));
 	i = 0;
-	count = 0;
+	j = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
+		while (s[i] && s[i] == c)
 			i++;
-		if (s[i] != c)
+		arrays[j] = ft_put_str(&s[i], ft_len_word(&s[i], c));
+		i += ft_len_word(&s[i], c);
+		if (!arrays[j])
 		{
-			count++;
-			while (s[i] != c && s[i])
-				i++;
+			while (j > 0)
+				free(arrays[--j]);
+			free(arrays);
+			return (0);
+		}
+		j++;
+	}
+	return (arrays);
+}
+static char	*ft_put_str(char const *s, int len)
+{
+	char	*str;
+
+	str = malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (0);
+	ft_strlcpy(str, s, len + 1);
+	return (str);
+}
+
+static int	ft_len_word(char const *s, char c)
+{
+	int	len_word;
+
+	len_word = 0;
+	while (*s && *s == c)
+		s++;
+	while (*s && *s != c)
+	{
+		len_word++;
+		s++;
+	}
+	return (len_word);
+}
+static int	ft_count_words(char const *s, char c)
+{
+	int	nmb_words;
+
+	nmb_words = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
+		{
+			nmb_words++;
+			while (*s && *s != c)
+				s++;
 		}
 	}
-	return (count);
+	return (nmb_words);
 }
-static char	**ft_create_array(int n)
+static char	**ft_create_arrays(int n)
 {
-	char	**words_array;
+	char	**arrays;
 
-	words_array = malloc((n + 1) * sizeof(char *));
-	if (!words_array)
-		return (NULL);
-	words_array[n] = NULL;
-	return (words_array);
+	arrays = malloc((n + 1) * sizeof(char *));
+	if (!arrays)
+		return (0);
+	arrays[n] = NULL;
+	return (arrays);
 }
-static char	*ft_put_word(char const *array, int len)
+/*
+#include <stdio.h>
+
+int	main(void)
 {
-	char	*word;
+	char	**str1;
 
-	word = malloc((len + 1) * sizeof(char));
-	if (!word)
-		return (NULL);
-	ft_strlcpy(word, array, len + 1);
-	return (word);
+	str1 = ft_split("dog cat romantic coffee", ' ');
+	printf("%s\n", str1[2]);
+	return (0);
 }
-
-static void	*ft_free_array(char **array, int max)
-{
-	int	i;
-
-	i = 0;
-	while (i < max)
-		free(array[i++]);
-	free(array);
-	return (NULL);
-}
+*/
