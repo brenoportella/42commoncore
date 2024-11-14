@@ -21,3 +21,9 @@ tão deixando a gente sonhar, me falta o strnstr atoi e as additionals. talvez e
 08/11/2024 17h13
 
 caralho eu fiquei e ainda estou DOENTE IRMÃO, bem lembrado, vou tomar remédio agora. bom fora isso, consegui fazer as funções que faltavam, e o header... o problema é que AGORA acabou o que eu tava acostuamdo a fazer, vulgo o facil. agora vou ter que ver coisas que nunca vi. tipo, sim, eu nunca digitei MALLOC() na minha vida, muito menos free(). sendo assim, vou ter que aprender agora. será que consigo lidar com isso?
+
+## <br>
+14/11/2024 17h53
+
+eu tentei muito o split, já ta ficando mais entendivel para mim, mas ainda não me garanto, preciso estudar o que ele ta fazendo. a parte de alocação de memória ta mais facil de entende. a relação de char *char e **char to entendendo tbm
+não me garanto em nada, preciso de uns dias sem olhar pra código e estudar dnv, honestamente não sei se entrego até dia 20/11
