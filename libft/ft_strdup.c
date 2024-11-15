@@ -6,13 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:50:23 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 12:18:46 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:37:46 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strdup(const char *s);
 
 char	*ft_strdup(const char *s)
 {

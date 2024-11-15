@@ -6,13 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:53 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 12:19:42 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:38:52 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strnstr(const char *src, const char *tofind, size_t len);
 
 char	*ft_strnstr(const char *src, const char *tofind, size_t len)
 {

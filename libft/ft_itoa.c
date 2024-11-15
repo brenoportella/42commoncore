@@ -6,25 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:39:43 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/14 16:28:06 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:35:02 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*name ft_itoa
-Prototype char *ft_itoa(int n);
-Turn in files -
-Parameters n: the integer to convert.
-Return value The string representing the integer.
-NULL if the allocation fails.
-External functs. malloc
-Description Allocates (with malloc(3)) and returns a string
-representing the integer received as an argument.
-Negative numbers must be handled.
-*/
-
 #include "libft.h"
-
-// descobrir o tamanho do int (em numero de bytes) para alocar o no malloc
 
 static int	ft_nmb_len(long n);
 
