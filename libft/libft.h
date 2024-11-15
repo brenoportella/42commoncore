@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:05:07 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/15 16:11:31 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:39:13 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nmb, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
