@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:39:43 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/18 14:17:57 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:52:07 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ static int	ft_nmb_len(long n)
 	int		len;
 
 	len = 0;
-	if (n == -2147483648)
-		return (11);
 	if (n == 0)
 		return (1);
 	if (n < 0)

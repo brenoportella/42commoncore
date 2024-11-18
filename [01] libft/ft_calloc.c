@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:50:30 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 13:05:14 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:35:41 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,5 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(array, 0, nmemb * size);
 	return (array);
 }
+// nmemb * size > size_max
+// nmemb > size_max / size

@@ -6,10 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:19 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/15 12:38:00 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 22:08:21 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//rever melhor
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
