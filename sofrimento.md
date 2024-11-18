@@ -27,3 +27,8 @@ caralho eu fiquei e ainda estou DOENTE IRMÃO, bem lembrado, vou tomar remédio 
 
 eu tentei muito o split, já ta ficando mais entendivel para mim, mas ainda não me garanto, preciso estudar o que ele ta fazendo. a parte de alocação de memória ta mais facil de entende. a relação de char *char e **char to entendendo tbm
 não me garanto em nada, preciso de uns dias sem olhar pra código e estudar dnv, honestamente não sei se entrego até dia 20/11
+
+## <br>
+18/11/2024 20h16
+
+bom, vim a 42 e fiz a normienette dos files. gracas a rduro-pe mais cedo eu ja havia ajustado a maioria das partes. em teoria agora estou pronto para submeter meu projeto. mas antes vou fazer uma avaliacao(?) teste com rduro-pe
