@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:34:53 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/18 14:28:20 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:10:44 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_strnstr(const char *src, const char *tofind, size_t len)
 {
 	char	*str;
-	size_t		i;
-	size_t		start;
-	
+	size_t	i;
+	size_t	start;
+
 	start = 0;
 	str = (char *)src;
 	if (tofind[0] == '\0')
