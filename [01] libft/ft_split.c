@@ -6,18 +6,18 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:32:58 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/14 15:15:06 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:25:15 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**ft_split(char const *s, char c); //função principal
-static int	ft_count_words(char const *s, char c);//conta quantas palavras tem na string
-static int	ft_len_word(char const *s, char c);//conta o tamanho da palavra
-static char	*ft_put_str(char const *s, int len);//aloca espaço para a string, insere o conteudo usando strlcopy
-static char	**ft_create_arrays(int n);//cria um array de arrays
-static void	ft_mem_free(char **arrays, int nmb_arrays);//limpa memoria do array inicial até o atual e depois do array de arrays
+char		**ft_split(char const *s, char c);
+static int	ft_count_words(char const *s, char c);
+static int	ft_len_word(char const *s, char c);
+static char	*ft_put_str(char const *s, int len);
+static char	**ft_create_arrays(int n);
+static void	ft_mem_free(char **arrays, int nmb_arrays);
 
 char	**ft_split(char const *s, char c)
 {
@@ -45,6 +45,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arrays);
 }
+
 static void	ft_mem_free(char **arrays, int nmb_arrays)
 {
 	int	i;
@@ -54,6 +55,7 @@ static void	ft_mem_free(char **arrays, int nmb_arrays)
 		free(arrays[i++]);
 	free(arrays);
 }
+
 static char	*ft_put_str(char const *s, int len)
 {
 	char	*str;
@@ -64,6 +66,7 @@ static char	*ft_put_str(char const *s, int len)
 	ft_strlcpy(str, s, len + 1);
 	return (str);
 }
+
 static int	ft_len_word(char const *s, char c)
 {
 	int	len_word;
@@ -78,6 +81,7 @@ static int	ft_len_word(char const *s, char c)
 	}
 	return (len_word);
 }
+
 static int	ft_count_words(char const *s, char c)
 {
 	int	nmb_words;
@@ -96,6 +100,7 @@ static int	ft_count_words(char const *s, char c)
 	}
 	return (nmb_words);
 }
+
 static char	**ft_create_arrays(int n)
 {
 	char	**arrays;
@@ -106,6 +111,7 @@ static char	**ft_create_arrays(int n)
 	arrays[n] = NULL;
 	return (arrays);
 }
+
 /*
 #include <stdio.h>
 

@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:39:43 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/15 12:35:02 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:17:57 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_itoa(int n)
 	nmb = n;
 	i = ft_nmb_len(nmb);
 	number = malloc((i + 1) * sizeof(char));
-	if (!number) 
+	if (!number)
 		return (NULL);
 	number[i] = '\0';
 	if (nmb < 0)
@@ -39,9 +39,10 @@ char	*ft_itoa(int n)
 	number[--i] = nmb + 48;
 	return (number);
 }
+
 static int	ft_nmb_len(long n)
 {
-	int len;
+	int		len;
 
 	len = 0;
 	if (n == -2147483648)
@@ -65,7 +66,7 @@ static int	ft_nmb_len(long n)
 
 int main (void)
 {
-	int		n;
+	int	n;
 
 	n = 0;
 	printf("the lenght of the number is %i\n", ft_nmb_len(n));

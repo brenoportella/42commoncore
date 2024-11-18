@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:40:03 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/11 15:01:20 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:29:08 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	subs[i] = 0;
 	return (subs);
 }
-/*
-#include <stdio.h>
-
-int main (void)
-{
-	printf("the substring of 'banana is good' (s= 5, l= 4) is: %s\n", ft_substr("banana is good", 5, 4));
-	printf("the substring of 'banana is good' (s= 1, l= 14) is: %s\n", ft_substr("banana is good", 1, 14));
-	printf("the substring of 'banana is good' (s= 1, l= 10) is: %s\n", ft_substr("banana is good", 1, 10));
-	printf("the substring of 'banana is good' (s= 0, l= 0) is: %s\n", ft_substr("banana is good", 0, 0));
-	printf("the substring of 'banana is good' (s= 8, l= 12) is: %s\n", ft_substr("banana is good", 8, 12));
-	printf("the substring of 'banana is good' (s= 0, l= 70) is: %s\n", ft_substr("banana is good", 0, 70));
-}*/

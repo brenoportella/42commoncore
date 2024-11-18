@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:50:23 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/15 12:37:46 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:26:01 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strdup(const char *s)
 		d_str[i] = s[i];
 		i++;
 	}
-	d_str[i] = s[i]; /*add the nullbyte*/
+	d_str[i] = s[i];
 	return (d_str);
 }
 /*
