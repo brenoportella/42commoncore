@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:32:58 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/18 14:25:15 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:51:37 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char		**ft_split(char const *s, char c);
 static int	ft_count_words(char const *s, char c);
 static int	ft_len_word(char const *s, char c);
 static char	*ft_put_str(char const *s, int len);
-static char	**ft_create_arrays(int n);
 static void	ft_mem_free(char **arrays, int nmb_arrays);
 
 char	**ft_split(char const *s, char c)
@@ -25,7 +24,7 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	char	**arrays;
 
-	arrays = ft_create_arrays(ft_count_words(s, c));
+	arrays = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
 	if (!s || !arrays)
 		return (0);
 	i = 0;
@@ -43,6 +42,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i += ft_len_word(&s[i], c);
 	}
+	arrays[j] = NULL;
 	return (arrays);
 }
 
@@ -100,18 +100,6 @@ static int	ft_count_words(char const *s, char c)
 	}
 	return (nmb_words);
 }
-
-static char	**ft_create_arrays(int n)
-{
-	char	**arrays;
-
-	arrays = malloc((n + 1) * sizeof(char *));
-	if (!arrays)
-		return (0);
-	arrays[n] = NULL;
-	return (arrays);
-}
-
 /*
 #include <stdio.h>
 
