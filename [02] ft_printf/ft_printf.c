@@ -6,10 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:04:48 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/19 18:30:45 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/19 18:37:21 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//my compile command is:  ccf ft_aux.c ft_printf.c -Llibft -lft 
 #include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
