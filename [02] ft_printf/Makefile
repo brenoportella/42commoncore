@@ -6,7 +6,7 @@
 #    By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 10:04:52 by bportell          #+#    #+#              #
-#    Updated: 2024/11/19 16:42:18 by bportell         ###   ########.fr        #
+#    Updated: 2024/11/20 14:16:33 by bportell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "Including c files (objs) into file $(NAME)"
-	@ar rcs $(NAME) $(OBJS) #pesquisar o que essa linha faz principalmente o ar rcs
+	@ar rcs $(NAME) $(OBJS)
 
 clean:
 	@echo "Removing files OBJS"

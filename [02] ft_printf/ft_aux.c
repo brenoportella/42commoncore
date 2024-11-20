@@ -6,15 +6,23 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:23:24 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/19 18:28:21 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:15:25 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static void	ft_putstr(char *str);
+
+static void	ft_putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
+}
+
 int	ft_printchar(int c)
 {
-	ft_putchar_fd(c, 1);
+	write(1, &c, 1);
 	return (1);
 }
 
@@ -25,7 +33,7 @@ int	ft_printstr(char *str)
 	if (!str)
 		str = "(null)";
 	count = 0;
-	ft_putstr_fd(&str[count], 1);
+	ft_putstr(&str[count]);
 	return (count);
 }
 
@@ -36,13 +44,21 @@ int	ft_printnbase(long n, char *base, int len)
 	count = 0;
 	if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
+		write(1, "-", 1);
 		n = -n;
 		count++;
 	}
 	if (n > len)
 		count += ft_printnbase(n / len, base, len);
-	ft_putchar_fd(base[n % len], 1);
+	write(1, &base[n % len], 1);
 	count++;
 	return (count);
+}
+
+int	ft_printptr(unsigned long p)
+{
+	if (!p)
+		return (ft_printf("(nil)"));
+	ft_printf("0x");
+	return (ft_printnbase(p, "0123456789abcdef", 16));
 }
