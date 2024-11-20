@@ -6,19 +6,11 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:23:24 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/20 14:15:25 by bportell         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:04:57 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static void	ft_putstr(char *str);
-
-static void	ft_putstr(char *str)
-{
-	while (*str)
-		write(1, str++, 1);
-}
 
 int	ft_printchar(int c)
 {
@@ -33,7 +25,8 @@ int	ft_printstr(char *str)
 	if (!str)
 		str = "(null)";
 	count = 0;
-	ft_putstr(&str[count]);
+	while(str[count])
+		write(1, &str[count++], 1);
 	return (count);
 }
 
