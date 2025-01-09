@@ -6,7 +6,7 @@
 #    By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 09:25:32 by bportell          #+#    #+#              #
-#    Updated: 2024/11/15 17:39:22 by bportell         ###   ########.fr        #
+#    Updated: 2024/11/29 19:16:24 by bportell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRCS = ft_isascii.c ft_memcpy.c ft_strlcpy.c ft_tolower.c \
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c \
 			ft_striteri.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
+
+OBJDIR = objectfiles
 
 CC = cc
 
@@ -30,16 +32,20 @@ GCCFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-%.o: %.c
+$(OBJDIR)/%.o: %.c | $(OBJDIR)
 	@$(CC) $(GCCFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	@echo "Including c files (objs) into file $(NAME)"
 	@ar rcs $(NAME) $(OBJS) #pesquisar o que essa linha faz principalmente o ar rcs
 
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
+
+
 clean:
 	@echo "Removing files OBJS"
-	@rm -f $(OBJS)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
 	@echo "Removing $(NAME)"
