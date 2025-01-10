@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:51:29 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/10 16:33:42 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/10 17:01:40 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,34 @@
 
 #define BUFFER_SIZE 42
 
-int	main(void)
+char	*get_next_line(int fd)
 {
 	char	*buffer;
-	int		my_file;
-	ssize_t bytes_read;
+	ssize_t	r_value;
 
 	buffer = malloc(BUFFER_SIZE * sizeof(char));
 	if (!buffer)
-		return (-1);
-	my_file = open("ascii-art.txt", O_RDONLY);
-	if (my_file == -1)
-		return (-1);
-	if (bytes_read == -1)
-		return (-1);
-	while((bytes_read = read(my_file, buffer, BUFFER_SIZE)) > 0)
 	{
-		// write(1, "linha->\n", 9);
-		write(1, buffer, bytes_read);
+		write(1, "Error: It was not possible allocate memory!\n", 45);
+		return 0;
 	}
-	
-	close(my_file);
-	free(buffer);
-	return 0;
+	while ((r_value = read(fd, buffer, BUFFER_SIZE)) > 0)
+	{
+		write(1, buffer, r_value);
+	}
+	return (buffer);
+}
+
+int	main(void)
+{
+	int		fd;
+	char	*buff;
+
+	fd = open("texto.txt", O_RDONLY);
+	if (fd == -1)
+		return (-1);
+	buff = get_next_line(fd);
+	close(fd);
+	free(buff);
+	return (0);
 }
