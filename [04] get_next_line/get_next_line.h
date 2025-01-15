@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:51:32 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/15 13:13:26 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/15 16:42:34 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,9 @@
 # include <sys/types.h>
 # include <unistd.h>
 
+void	*ft_memset(void *s, int c, size_t n);
+char	*ft_strjoin(char *s1, char *s2);
+void	ft_adjustMemory(char *buffer);
+int		ft_newLineExists(char *line);
+int		ft_strlen(char *str);
 #endif
