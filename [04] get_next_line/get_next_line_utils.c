@@ -6,8 +6,9 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:51:33 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/15 09:56:27 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/15 13:13:19 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
