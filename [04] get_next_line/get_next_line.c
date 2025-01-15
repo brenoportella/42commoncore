@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:51:31 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/15 16:50:39 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/15 17:02:34 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ int	main(void)
 	char	*line;
 	int		i;
 
-	fd = open("texto.txt", O_RDONLY);
-	i = 0;
+	fd = open("ascii-art.txt", O_RDONLY);
+	i = 1;
 	line = NULL;
 	while ((line = get_next_line(fd)) != NULL)
 	{
-		printf("the line Nº%d is: %s\n", i, line);
+		printf("the line Nº%d is: %s", i, line);
 		i++;
 		free(line);
 	}
