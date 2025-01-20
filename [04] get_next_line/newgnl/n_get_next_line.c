@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:21 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/20 17:50:29 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/20 18:01:29 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 }
 
 // encontrar a primeira ocorrencia de um caractere
-char	*_find_caracter(char *str, int caracter)
+char	*_find_character(char *str, int caracter)
 {
 	int	i;
 
