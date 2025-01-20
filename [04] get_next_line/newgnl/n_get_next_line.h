@@ -6,7 +6,14 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:24 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/16 13:24:25 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:03:59 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef N_GET_NEXT_LINE_H
+# define N_GET_NEXT_LINE_H
+
+# define BUFFER_SIZE 42
+char	*_strjoin(char *str1, char *str2);
+int		_strlen(char *str);
+#endif
