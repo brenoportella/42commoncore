@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:21 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/20 16:50:43 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:50:29 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,37 +18,21 @@ char	*get_next_line(int fd)
 	char		*line;
 }
 
-char	*_strjoin(char *str1, char *str2)
-{
-	char	*new_str;
-	int		i;
-	int		j;
-
-	if (!str1)
-		str1 = "";
-	new_str = malloc((_strlen(str1) + _strlen(str2) + 1) * sizeof(char));
-	if (!new_str)
-		return (0);
-	i = -1;
-	while (str1[++i])
-		new_str[i] = str1[i];
-	j = -1;
-	while (str2[++j])
-		new_str[i + j] = str2[j];
-	new_str[i + j] = '\0';
-	return (new_str);
-}
-int	_strlen(char *str)
+// encontrar a primeira ocorrencia de um caractere
+char	*_find_caracter(char *str, int caracter)
 {
 	int	i;
 
-	if (!str)
-		return (0);
 	i = 0;
 	while (str[i])
+	{
+		if (str[i] == (char)caracter)
+			return (&str[i]);
 		i++;
-	return (i);
+	}
+	return (0);
 }
+
 // uma variavel estatica para armazenar o conteudo
 // depois despeja-lo em outra para preencher o que chamaremos de LINHA
 // a linha é o que deve ser retornado
