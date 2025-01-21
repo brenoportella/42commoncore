@@ -2,27 +2,33 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-char	*_find_caracter(char *str, int caracter)
+void	_memalign(char *buffer)
 {
-	int	i;
+	int	i; //A POSICAO DE \N
+	int	j; //O INICIO DO BUFFER ATE ONDE ELE RECEBEU BYTS OU SEJA O TAMANHO DO TEXTO DPS DO /N, ELE MENOS O BUFFER É O TOTAL DE NULOS
 
 	i = 0;
-	while (str[i])
-	{
-		if (str[i] == (char)caracter)
-			return (&str[i]);
+	while (buffer[i] && buffer[i] != '\n')
 		i++;
+	if (buffer[i] == '\n')
+	{
+		j = 0;
+		while(buffer[i] && i < 42)
+			buffer[j++] = buffer[i++];
 	}
-	return (0);
+	//até aqui nós só trocamos os bytes de lugar.
+	while ((42 - j))
+	return ;
 }
 
 int	main(void)
 {
-	char str1[] = "breno";
-	int character;
-
-	character = 'n';
-	printf("find the character %c -->%s\n", character, _find_caracter(str1,
-			character));
+	char a[] = "Breno Portella"; // src
+	// char b[20] = {0};            // dest
+	printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
+		a, a);
+	_memalign(a, a + 6, 5);
+	printf("AFTER FT_MEMMOVE\nThe src array is: %s\nThe dest array is: %s\n", a,
+		a);
 	return (0);
 }
