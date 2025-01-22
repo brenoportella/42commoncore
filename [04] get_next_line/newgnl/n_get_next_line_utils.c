@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:16 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/22 17:48:55 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/22 18:14:39 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ char	*_strjoin(char *str1, char *str2)
 	int		j;
 
 	if (!str1)
-		str1 = "";
-	if (!str2)
-		str2 = "";
+	{
+		str1 = malloc(1 * sizeof(char));
+		str1[0] = '\0';
+	}
 	new_str = malloc((_strlen(str1) + _strlen(str2) + 1) * sizeof(char));
 	if (!new_str)
 		return (0);
@@ -45,8 +46,7 @@ char	*_strjoin(char *str1, char *str2)
 	while (str2[j] && str2[j - 1] != '\n')
 		new_str[i++] = str2[j++];
 	new_str[i] = '\0';
-	if (*str1)
-		free(str1);
+	free(str1);
 	return (new_str);
 }
 int	_find_caracter(char *buffer)
@@ -74,9 +74,9 @@ void	_memalign(char *buffer)
 	i = 0;
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
+	j = 0;
 	if (buffer[i] == '\n')
 	{
-		j = 0;
 		i++;
 		while (buffer[i] && i < BUFFER_SIZE)
 			buffer[j++] = buffer[i++];
