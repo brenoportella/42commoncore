@@ -1,34 +1,53 @@
+#include "n_get_next_line.h"
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
-void	_memalign(char *buffer)
+char	*get_next_line(int fd)
 {
-	int	i; //A POSICAO DE \N
-	int	j; //O INICIO DO BUFFER ATE ONDE ELE RECEBEU BYTS OU SEJA O TAMANHO DO TEXTO DPS DO /N, ELE MENOS O BUFFER É O TOTAL DE NULOS
+	static char	buffer[BUFFER_SIZE + 1];
+	char		*line;
+	ssize_t		readBytes;
 
-	i = 0;
-	while (buffer[i] && buffer[i] != '\n')
-		i++;
-	if (buffer[i] == '\n')
+	if (BUFFER_SIZE <= 0 || fd <= 0)
+		return (_memalign(buffer), NULL);
+	line = _strjoin(NULL, buffer); //se o buffer não tiver nada, isso aqui é só a inicializaçao da variavel
+	if (!line)
+		return (NULL);
+	_memalign(buffer); //se o buffer for vazio? vai retornar ele vazio na mesma
+	readBytes = 1;
+	while (!(_find_caracter(line))) //se o \n não for encontrado na line (que esta vazia)
 	{
-		j = 0;
-		while(buffer[i] && i < 42)
-			buffer[j++] = buffer[i++];
+		readBytes = read(fd, buffer, BUFFER_SIZE);
+		if (readBytes <= 0)
+			break;
+		line = _strjoin(line, buffer); //vai pegar a line vazia e atribuir o que tava dentro de buffer nela, o problema que tudo ta dentro de buffer.
+		if (!line)
+			return (NULL);
+		_memalign(buffer);//vai organizar o buffer pra dps da primeira \n
 	}
-	//até aqui nós só trocamos os bytes de lugar.
-	while ((42 - j))
-	return ;
+	if (!line[0] || readBytes < 0)
+		return (free(line), NULL);
+	return (line);
 }
 
 int	main(void)
 {
-	char a[] = "Breno Portella"; // src
-	// char b[20] = {0};            // dest
-	printf("BEFORE FT_MEMMOVE:\nThe src array is: %s\nThe dest array is: %s\n",
-		a, a);
-	_memalign(a, a + 6, 5);
-	printf("AFTER FT_MEMMOVE\nThe src array is: %s\nThe dest array is: %s\n", a,
-		a);
+	int		fd;
+	char	*line;
+	int		i;
+
+	fd = open("breno.txt", O_RDONLY);
+	i = 1;
+	line = NULL;
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("the line Nº%d is: %s", i, line);
+		i++;
+		free(line);
+	}
+	close(fd);
 	return (0);
 }
