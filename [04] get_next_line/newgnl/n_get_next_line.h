@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:24 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/20 18:01:35 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/22 17:53:16 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 # define N_GET_NEXT_LINE_H
 
 # define BUFFER_SIZE 42
-char	*_find_character(char *str, int caracter);
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+
 char	*_strjoin(char *str1, char *str2);
+int		_find_caracter(char *buffer);
 int		_strlen(char *str);
+void	_memalign(char *buffer);
 #endif
