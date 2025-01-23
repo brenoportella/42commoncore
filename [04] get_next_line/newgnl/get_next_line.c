@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   n_get_next_line.c                                  :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:21 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/22 17:51:54 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:51:26 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "n_get_next_line.h"
+#include "get_next_line.h"
+
 /*maybe rewrite this function or study and comment it a lot*/
 char	*get_next_line(int fd)
 {
@@ -21,7 +22,8 @@ char	*get_next_line(int fd)
 	if (BUFFER_SIZE <= 0 || fd <= 0)
 		return (_memalign(buffer), NULL);
 	line = _strjoin(NULL, buffer);
-	isso aqui é só a inicializaçao da variavel if (!line) return (NULL);
+	if (!line)
+		return (NULL);
 	_memalign(buffer);
 	readBytes = 1;
 	while (!(_find_caracter(line)))

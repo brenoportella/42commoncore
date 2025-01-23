@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   n_get_next_line_utils.c                            :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:16 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/22 18:14:39 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/22 18:25:31 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "n_get_next_line.h"
+#include "get_next_line.h"
 
 int	_strlen(char *str)
 {

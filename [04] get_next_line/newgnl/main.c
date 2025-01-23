@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   n_get_next_line.h                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 13:24:24 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/22 17:57:49 by bportell         ###   ########.fr       */
+/*   Created: 2025/01/23 09:52:45 by bportell          #+#    #+#             */
+/*   Updated: 2025/01/23 09:55:10 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef N_GET_NEXT_LINE_H
-# define N_GET_NEXT_LINE_H
+#include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
-# define BUFFER_SIZE 42
+int	main(void)
+{
+	int		fd;
+	char	*line;
+	int		i;
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-char	*get_next_line(int fd);
-char	*_strjoin(char *str1, char *str2);
-int		_find_caracter(char *buffer);
-int		_strlen(char *str);
-void	_memalign(char *buffer);
-#endif
+	fd = open("../texto.txt", O_RDONLY);
+	i = 1;
+	line = NULL;
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("%d-->%s\n", i, line);
+		i++;
+		free(line);
+	}
+	close(fd);
+	return (0);
+}
