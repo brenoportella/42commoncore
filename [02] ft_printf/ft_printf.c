@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:04:48 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/29 17:43:32 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:41:57 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_pct_found(const char *a_pct, va_list args)
 	else if (*a_pct == 'd' || *a_pct == 'i')
 		count = ft_printnbase(va_arg(args, int), "0123456789", 10);
 	else if (*a_pct == 'u')
-		count = ft_printnbase(va_arg(args, unsigned long), "0123456789", 10);
+		count = ft_printnbase(va_arg(args, unsigned int), "0123456789", 10);
 	else if (*a_pct == 'x')
 		count = ft_printnbase(va_arg(args, unsigned int), "0123456789abcdef",
 				16);

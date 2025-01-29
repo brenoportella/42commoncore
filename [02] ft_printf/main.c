@@ -6,17 +6,17 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 09:43:49 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/29 18:02:54 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:41:10 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	main(void)
+/* int	main(void)
 {
 	char letter;
 	char *string;
-	char str[] = "\0";
+	char *str = NULL;
 	int	*ptr;
 	int number;
 	int count1;
@@ -73,6 +73,7 @@ int	main(void)
 	count9 = printf("\n9 | Try to print %%");
 	count10 = printf("\n10 | %s", str);
 	count11 = printf("\n11 | %p", ptr);
+	printf(NULL);
 	printf("\n count1: %i", count1);
 	printf("\n count2: %i", count2);
 	printf("\n count3: %i", count3);
@@ -86,4 +87,11 @@ int	main(void)
 	printf("\n count11: %i", count11);
 	printf("\n\nend");
 	return (0);
+} */
+
+int main (void)
+{
+	ft_printf("%u\n", __LONG_MAX__);
+	printf("%u\n", __LONG_MAX__);
+	return 0;
 }
