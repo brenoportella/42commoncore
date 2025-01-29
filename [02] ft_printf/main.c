@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 09:43:49 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/21 09:46:09 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/29 18:02:54 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int	main(void)
 {
 	char letter;
 	char *string;
-	char str[] = "";
+	char str[] = "\0";
+	int	*ptr;
 	int number;
 	int count1;
 	int count2;
@@ -26,7 +27,9 @@ int	main(void)
 	int count8;
 	int count9;
 	int count10;
+	int count11;
 
+	ptr = NULL;
 	string = "my name is breno";
 	letter = 'a';
 	number = -95;
@@ -42,8 +45,10 @@ int	main(void)
 			number);
 	count7 = ft_printf("\n7 | Try to print the pointer: %p", &string);
 	count8 = ft_printf("\n8 | Try to print null str: %s", str);
-	count9 = ft_printf("\n9 | Try to print %%\n");
-	count10 = ft_printf("%s", str);
+	count9 = ft_printf("\n9 | Try to print %%");
+	count10 = ft_printf("\n10 | %s", str);
+	count11 = ft_printf("\n11 | %p", ptr);
+	ft_printf(NULL);
 	printf("\n count1: %i", count1);
 	printf("\n count2: %i", count2);
 	printf("\n count3: %i", count3);
@@ -54,6 +59,7 @@ int	main(void)
 	printf("\n count8: %i", count8);
 	printf("\n count9: %i", count9);
 	printf("\n count10: %i", count10);
+	printf("\n count11: %i", count11);
 	printf("\n_______________PRINTF______________\n");
 	count1 = printf("1 | Try to print the letter: %c", letter);
 	count2 = printf("\n2 | Try to print the string: %s", string);
@@ -64,8 +70,9 @@ int	main(void)
 	count6 = printf("\n6 | Try to print the hex UPPER number (X): %X", number);
 	count7 = printf("\n7 | Try to print the pointer: %p", &string);
 	count8 = printf("\n8 | Try to print null str: %s", str);
-	count9 = printf("\n9 | Try to print %%\n");
-	count10 = printf("%s", str);
+	count9 = printf("\n9 | Try to print %%");
+	count10 = printf("\n10 | %s", str);
+	count11 = printf("\n11 | %p", ptr);
 	printf("\n count1: %i", count1);
 	printf("\n count2: %i", count2);
 	printf("\n count3: %i", count3);
@@ -76,6 +83,7 @@ int	main(void)
 	printf("\n count8: %i", count8);
 	printf("\n count9: %i", count9);
 	printf("\n count10: %i", count10);
+	printf("\n count11: %i", count11);
 	printf("\n\nend");
 	return (0);
 }

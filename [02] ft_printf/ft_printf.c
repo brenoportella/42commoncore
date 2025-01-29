@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:04:48 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/21 09:44:10 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/29 17:43:32 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_printf(const char *str, ...)
 	va_list	args;
 	int		count;
 
+	if (!str)
+		return 0;
 	va_start(args, str);
 	count = 0;
 	while (*str)
