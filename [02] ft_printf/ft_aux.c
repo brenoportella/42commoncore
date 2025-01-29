@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:23:24 by bportell          #+#    #+#             */
-/*   Updated: 2024/11/20 17:53:13 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/29 21:21:41 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	ft_printnbase(long n, char *base, int len)
 
 int	ft_printptr(unsigned long p)
 {
-	int count;
+	int	count;
 
 	count = 2;
 	if (!p)

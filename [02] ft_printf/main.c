@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 09:43:49 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/29 19:41:10 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/29 21:22:59 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,9 @@
 	return (0);
 } */
 
-int main (void)
+int	main(void)
 {
 	ft_printf("%u\n", __LONG_MAX__);
 	printf("%u\n", __LONG_MAX__);
-	return 0;
+	return (0);
 }
