@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 09:52:45 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/23 09:55:10 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/30 13:31:03 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void)
 	char	*line;
 	int		i;
 
-	fd = open("../texto.txt", O_RDONLY);
+	fd = open("texto.txt", O_RDONLY);
 	i = 1;
 	line = NULL;
 	while ((line = get_next_line(fd)) != NULL)

@@ -5,87 +5,86 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/09 15:51:33 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/15 16:51:55 by bportell         ###   ########.fr       */
+/*   Created: 2025/01/16 13:24:16 by bportell          #+#    #+#             */
+/*   Updated: 2025/01/30 13:33:39 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+int	_strlen(char *str)
 {
-	size_t	i1;
-	size_t	i2;
-	char	*str;
+	int	i;
 
-	if (!s1)
-	{
-		s1 = malloc(1 * sizeof(char));
-		s1[0] = '\0';
-	}
-	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (str == NULL)
+	if (!str)
 		return (0);
-	i1 = -1;
-	while (s1[++i1])
-		str[i1] = s1[i1];
-	i2 = 0;
-	if (s2[i2]) // verificar se essa condição pode ser só ignorada em testes dps
-		str[i1++] = s2[i2++];
-	while (s2[i2] && s2[i2 - 1] != '\n')
-		str[i1++] = s2[i2++];
-	str[i1] = '\0';
-	free(s1);
-	return (str);
-}
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
-}
-void	ft_adjustMemory(char *buffer)
-{
-	int	newLinePos;
-	int	i;
-	int	j;
-
-	newLinePos = 0;
-	while (buffer[newLinePos] && buffer[newLinePos] != '\n')
-		newLinePos++;
-	i = newLinePos;
-	j = 0;
-	if (buffer[i] == '\n')
-		while (buffer[++i] && i < BUFFER_SIZE)
-			buffer[j++] = buffer[i];
-	ft_memset(&buffer[j], '\0', BUFFER_SIZE - j);
-}
-int	ft_newLineExists(char *line)
-{
-	int	i;
-
-	i = -1;
-	while (line[++i])
-	{
-		if (line[i] == '\n')
-			return (1);
-	}
-	return (0);
-}
-int	ft_strlen(char *str)
-{
-	int i;
-
 	i = 0;
 	while (str[i])
 		i++;
 	return (i);
+}
+
+char	*_strjoin(char *str1, char *str2)
+{
+	char	*new_str;
+	int		i;
+	int		j;
+
+	if (!str1)
+	{
+		str1 = malloc(1 * sizeof(char));
+		str1[0] = '\0';
+	}
+	new_str = malloc((_strlen(str1) + _strlen(str2) + 1) * sizeof(char));
+	if (!new_str)
+		return (0);
+	i = -1;
+	while (str1[++i])
+		new_str[i] = str1[i];
+	j = 0;
+	if (str2[j])
+		new_str[i++] = str2[j++];
+	while (str2[j] && str2[j - 1] != '\n')
+		new_str[i++] = str2[j++];
+	new_str[i] = '\0';
+	free(str1);
+	return (new_str);
+}
+
+int	_find_caracter(char *buffer)
+{
+	int	i;
+
+	if (!buffer)
+		return (0);
+	i = 0;
+	while (buffer[i])
+	{
+		if (buffer[i] == '\n')
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+void	_memalign(char *buffer)
+{
+	int	i;
+	int	j;
+
+	if (!buffer)
+		return ;
+	i = 0;
+	while (buffer[i] && buffer[i] != '\n')
+		i++;
+	j = 0;
+	if (buffer[i] == '\n')
+	{
+		i++;
+		while (buffer[i] && i < BUFFER_SIZE)
+			buffer[j++] = buffer[i++];
+	}
+	while (j < BUFFER_SIZE)
+		buffer[j++] = '\0';
+	return ;
 }
