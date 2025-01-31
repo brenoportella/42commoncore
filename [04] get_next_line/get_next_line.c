@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 13:24:21 by bportell          #+#    #+#             */
-/*   Updated: 2025/01/30 13:32:46 by bportell         ###   ########.fr       */
+/*   Updated: 2025/01/31 10:50:30 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	ssize_t		read_bytes;
 
-	if (BUFFER_SIZE <= 0 || fd <= 0)
+	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (_memalign(buffer), NULL);
 	line = _strjoin(NULL, buffer);
 	if (!line)
