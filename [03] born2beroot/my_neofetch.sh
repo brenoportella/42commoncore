@@ -21,6 +21,9 @@ cpul=$(top -bn1 | grep "Cpu(s)" | awk '{printf "%.1f", $2 + $4}')
 #LAST BOOT TIME
 lboot=$(who -b | grep "system" | awk '{printf $3 " " $4}')
 
+#LVM USE
+lvmon=$(if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi)
+
 #NUMBER TCPS CONNECTIONS
 tcps=$(ss -ta | grep "ESTAB" | wc -l)
 
@@ -42,7 +45,7 @@ wall "
 	#Disk usage: $disk
 	#CPU load: $cpul
 	#Last boot: $lboot
-	#LVM use: 
+	#LVM use: $lvmon
 	#Connections TCP : $tcps
 	#User log: $users
 	#Network: $netw
