@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # MY MACHINE NAME
-mach=$(echo "@$(hostname)")
+mach=$(echo "$(id -un)@$(hostname)")
 # MY ARCHITETURE
 os=$(uname -rm)
 # MY DISTRO
