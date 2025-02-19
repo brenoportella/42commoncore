@@ -21,7 +21,7 @@ users=$(users | wc -w)
 #MY IP AND MAC ADDRESS
 ipadd=$(echo "IP: $(ip -o -4 addr | grep "enp" | head -n1 | awk '{print $4}' | cut -d/ -f1) | ")
 macadd=$(echo "MAC: $(ip a | grep "link/ether" | head -n1 | awk '{print "(" $2 ")"}')")
-netw= "$ipadd $macadd"
+netw="$ipadd $macadd"
 #SUDO COMMANDS NUMBER
 sudo=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 
