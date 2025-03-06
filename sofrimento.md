@@ -32,3 +32,9 @@ não me garanto em nada, preciso de uns dias sem olhar pra código e estudar dnv
 18/11/2024 20h16
 
 bom, vim a 42 e fiz a normienette dos files. gracas a rduro-pe mais cedo eu ja havia ajustado a maioria das partes. em teoria agora estou pronto para submeter meu projeto. mas antes vou fazer uma avaliacao(?) teste com rduro-pe
+
+## <br>
+06/03/2025 17h36
+
+então, passou uns 3 meses, consegui entregar o rank 01, agora no rank 02, passei ontem...
+começou a ficar dificil, coloquei freeze de 60 dias pra começar a pensar nos projetos. mas honestamente, sinto que estou desanimado
