@@ -6,7 +6,7 @@
 #    By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 12:39:58 by bportell          #+#    #+#              #
-#    Updated: 2025/03/11 13:24:56 by bportell         ###   ########.fr        #
+#    Updated: 2025/03/11 13:29:44 by bportell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ $(LIBFT):
 	@echo "Compiling: LIBFT"
 	@make -C ./inc/libft -s
 	@echo "Done: Compiling LIBFT"
-	
+
 # EXECUTION RULES
 exe_clean:
 	rm -rf infile*
