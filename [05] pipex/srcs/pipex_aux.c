@@ -1,4 +1,4 @@
-#include "first_pipex.h"
+#include "../inc/pipex.h"
 
 void	command_one(int pfd[], char *argv[])
 {

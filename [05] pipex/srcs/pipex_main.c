@@ -1,4 +1,4 @@
-#include "first_pipex.h"
+#include "../inc/pipex.h"
 
 int	main(int argc, char *argv[])
 {
