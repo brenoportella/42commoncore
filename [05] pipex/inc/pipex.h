@@ -11,7 +11,9 @@
 # include <unistd.h>
 
 // AUX
-void	command_one(int pfd[], char *argv[]);
-void	command_two(int pfd[], char *argv[]);
+void	command_one(int pfd[], char *argv[], char *envp[]);
+void	command_two(int pfd[], char *argv[], char *envp[]);
+char	*get_cmd_path(char *cmd, char **envp);
+void	free_split(char **split);
 
 #endif
