@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 11:35:51 by bportell          #+#    #+#             */
-/*   Updated: 2025/05/06 12:58:32 by bportell         ###   ########.fr       */
+/*   Updated: 2025/05/06 13:19:27 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	command_one(int pfd[], char *argv[], char *envp[])
 	fd_in = open(argv[1], O_RDONLY);
 	if (fd_in == -1)
 	{
-		perror("ERROR: can not open the file one!");
+		perror("ERROR: can not open the infile!\n");
 		exit(EXIT_FAILURE);
 	}
 	dup2(fd_in, STDIN_FILENO);   /*entrada do cmd 1 = file1*/
@@ -31,11 +31,11 @@ void	command_one(int pfd[], char *argv[], char *envp[])
 	cmd = ft_split(argv[2], ' ');
 	if (!cmd)
 	{
-		perror("ERROR: can not split/read command one!");
+		perror("ERROR: can not split/read command one!\n");
 		exit(EXIT_FAILURE);
 	}
 	execve(get_cmd_path(cmd[0], envp), cmd, envp);
-	perror("ERROR: can not execute command one!");
+	perror("ERROR: can not execute command one!\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -47,7 +47,7 @@ void	command_two(int pfd[], char *argv[], char **envp)
 	fd_out = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_out == -1)
 	{
-		perror("ERROR: can not open/write in outfile!");
+		perror("ERROR: can not open/write in outfile!\n");
 		exit(EXIT_FAILURE);
 	}
 	dup2(pfd[0], STDIN_FILENO);  /*entrada = pipe*/
@@ -58,7 +58,7 @@ void	command_two(int pfd[], char *argv[], char **envp)
 	cmd = ft_split(argv[3], ' ');
 	if (!cmd)
 	{
-		perror("ERROR: can not slipt/read command two!");
+		perror("ERROR: can not slipt/read command two!\n");
 		exit(EXIT_FAILURE);
 	}
 	execve(get_cmd_path(cmd[0], envp), cmd, envp);
