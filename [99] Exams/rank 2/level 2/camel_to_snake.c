@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:54:17 by bportell          #+#    #+#             */
-/*   Updated: 2025/05/16 18:40:41 by bportell         ###   ########.fr       */
+/*   Updated: 2025/05/19 19:01:14 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@ $
 int	_is_uppercase(char c)
 {
 	return (c >= 'A' && c <= 'Z');
+}
+char	_upper_to_lower(char c)
+{
+	if (_is_uppercase(c))
+		c += 32;
+	return (c);
 }
 int	_uppercount(char *str)
 {
@@ -94,23 +100,29 @@ char	*camel_to_snake(char *camel)
 	{
 		if (_is_uppercase(camel[i]))
 		{
+			if (i != 0)
+				snake[j++] = '_';
+			snake[j++] = _upper_to_lower(camel[i]);
 		}
-		if (_is_uppercase(camel[i]))
-		{
-		}
-		else if (!_is_uppercase(camel[i]))
-		{
-		}
-		++;
+		else
+			snake[j++] = camel[i];
+		i++;
 	}
+	snake[j] = '\0';
 	return (snake);
 }
 
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char camel[] = "minhaCamelString";
-	printf("%s\n", camel_to_snake(camel));
+	if (argc == 2)
+	{
+		char *snake;
+		snake = camel_to_snake(argv[1]);
+		_putstr(snake);
+		free(snake);
+	}
+		write(1, "\n", 1);
 	return (0);
 }
