@@ -6,7 +6,7 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 10:30:10 by bportell          #+#    #+#             */
-/*   Updated: 2025/05/20 11:43:44 by bportell         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:52:44 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,19 +44,9 @@ $>
 char	alpha_mirror(char c)
 {
 	if (c >= 'a' && c <= 'z')
-	{
-		if (c <= 'm')
-			return ('a' - c + 'z');
-		if (c >= 'n')
-			return ('z' - c + 'a');
-	}
+		return ('a' + 'z' - c);
 	if (c >= 'A' && c <= 'Z')
-	{
-		if (c <= 'M')
-			return ('A' - c + 'Z');
-		if (c >= 'N')
-			return ('Z' - c + 'A');
-	}
+		return ('A' + 'Z' - c);
 	return (c);
 }
 
