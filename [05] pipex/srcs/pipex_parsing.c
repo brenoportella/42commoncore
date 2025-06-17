@@ -6,14 +6,12 @@
 /*   By: bportell <bportell@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:45:15 by bportell          #+#    #+#             */
-/*   Updated: 2025/06/03 16:12:41 by bportell         ###   ########.fr       */
+/*   Updated: 2025/06/17 18:35:42 by bportell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/pipex.h"
 #include <stdio.h>
-
-// função para retornar char **cmd (array de strings com o conteudo do cmd)
-
 // check
 // função para contar a quantidade de termos dentro do cmd original
 // para dps alocar o array de strings
@@ -21,7 +19,42 @@
 // check
 // função para contar o tamanho de cada parte do cmd (cada palavra)
 
+//check
 // função para alocar uma string dentro do array
+
+// função para retornar char **cmd (array de strings com o conteudo do cmd)
+
+/**
+ * Allocates and copies a string into a specified position of a string array.
+ *
+ * This function receives a string array (array of char pointers), a position,
+ * and a source string. It allocates enough memory to store the source string
+ * (including the * null terminator) and copies the content of the source
+ * string into the specified position of the array.
+ *
+ * @param arr The array of strings (char **), where the string will be stored.
+ * @param pos The index in the array where the string will be allocated
+ * and copied.
+ * @param str The source string to be copied into the array.
+ *
+ * @return void
+ *
+ * @note If arr is NULL or the memory allocation fails,
+	the function does nothing.
+ */
+static void	put_str_in_array(char **arr, int pos, const char *str)
+{
+	int	lenstr;
+
+	if (!arr)
+		return ;
+	lenstr = ft_strlen(str);
+	arr[pos] = malloc((lenstr + 1) * sizeof(char));
+	if (!arr[pos])
+		return ;
+	ft_strlcpy(arr[pos], str, lenstr + 1);
+	return ;
+}
 
 /**
  * Count the number of parameters in a command string.
@@ -98,34 +131,3 @@ static int	param_len(const char *str, char c)
 	}
 	return (len);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	int			num;
-// 	int			len;
-// 	const char	*ptr;
-
-// 	if (argc < 2)
-// 	{
-// 		printf("Usage: %s \"command string\"\n", argv[0]);
-// 		return (1);
-// 	}
-
-// 	ptr = argv[1];
-// 	num = param_number(ptr);
-// 	printf("Number of parameters: %d\n", num);
-
-// 	while (num > 0 && *ptr)
-// 	{
-// 		while (*ptr == ' ')
-// 			ptr++;
-// 		len = param_len(ptr, ' ');
-// 		printf("Length of parameter: %d, parameter: \"", len);
-// 		for (int i = 0; i < len; i++)
-// 			putchar(ptr[i]);
-// 		printf("\"\n");
-// 		ptr += len;
-// 		num--;
-// 	}
-// 	return (0);
-// }
